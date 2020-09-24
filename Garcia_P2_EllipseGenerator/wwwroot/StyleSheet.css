@@ -1,0 +1,74 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial;
+    font-size: 10px;
+    min-height: 100%;
+}
+
+header {
+    font-family: 'Agency FB';
+    font-size: 40px;
+    text-align: center;
+    background-image: url(galaxy.jpg);
+    font-style: italic;
+}
+/*Style an Id attribute*/
+#maincontent {
+    background-color: lightgrey;
+    height: 500px;
+}
+/*Style a class attribute*/
+.emphasis {
+    color: red;
+    font-weight: 800;
+}
+
+nav {
+    float: left;
+    height: 500px;
+    width: 200px;
+    padding: 5px;
+    vertical-align: top;
+    background-color: #246C96;
+}
+
+aside {
+    float: right;
+    height: 200px;
+    width: 200px;
+    background-color: #80acc6;
+}
+
+section {
+    font-family: 'Bodoni MT';
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: darkblue;
+}
+
+ul {
+    text-indent: 5px;
+    list-style-position: inside;
+}
+
+footer {
+    color: white;
+    background-color: #246C96;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+header, #maincontent, nav, aside, footer {
+    padding: 5px;
+}
+
+a {
+    color: yellow;
+}
+
