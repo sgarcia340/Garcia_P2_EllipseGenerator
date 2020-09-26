@@ -17,8 +17,8 @@ header {
 }
 /*Style an Id attribute*/
 #maincontent {
-    background-color: lightgrey;
-    height: 500px;
+    background-color: #594C63;
+    height: 800px;
 }
 /*Style a class attribute*/
 .emphasis {
@@ -28,18 +28,18 @@ header {
 
 nav {
     float: left;
-    height: 500px;
+    height: 800px;
     width: 200px;
     padding: 5px;
     vertical-align: top;
-    background-color: #246C96;
+    background-color: #90706F;
 }
 
 aside {
     float: right;
     height: 200px;
     width: 200px;
-    background-color: #80acc6;
+    background-color: #C5AC96;
 }
 
 section {
@@ -56,12 +56,13 @@ ul {
 
 footer {
     color: white;
-    background-color: #246C96;
+    background-color: #121A38;
     clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: -3em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 header, #maincontent, nav, aside, footer {
