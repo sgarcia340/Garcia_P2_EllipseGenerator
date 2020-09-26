@@ -40,6 +40,7 @@ aside {
     height: 200px;
     width: 200px;
     background-color: #C5AC96;
+    text-align: center;
 }
 
 section {
@@ -50,8 +51,10 @@ section {
 }
 
 ul {
+    font-family: 'Bodoni MT';
     text-indent: 5px;
     list-style-position: inside;
+    padding: 5px;
 }
 
 footer {
@@ -70,7 +73,7 @@ header, #maincontent, nav, aside, footer {
 }
 
 a {
-    color: yellow;
+    color: white;
 }
 
 input[type=text], select {
