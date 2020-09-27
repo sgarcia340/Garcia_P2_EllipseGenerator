@@ -1,32 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Ellipse Generator</title>
+    <title>Ellipse Parameters</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+    <style>
+        fieldset{
+            font-family:'Comic Sans MS';
+            font-size:20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1 style="color:cornflowerblue;">Ellipse Generator 488!!</h1>
     </header>
     <div id="maincontent">
-        <form action="/response.html" method="get">
-            <fieldset>
-                <label for="num1">X-axis Coordinate:</label>
-                <input type="text" name="num1" value="0" />
+        <section>
+            <h2>Ellipse Specifications</h2> 
+        </section>
+        <section>
+            <form action="/response.html" method="get">
+                <fieldset>
+                    <label for="num1">X-axis Coordinate:</label>
+                    <input type="text" name="num1" value="0" />
 
-                <label for="num2">Y-axis Coordinate:</label>
-                <input type="text" name="num2" value="0" />
-
-                <!--<input type="text" name="num3" value="0" />
-                <label for="num3">Width</label>
-
-                <input type="text" name="num4" value="0" />
-                <label for="num4">Height</label>-->
-
-                <input type="submit" value="Submit" />
-            </fieldset>
-        </form>
+                    <label for="num2">Y-axis Coordinate:</label>
+                    <input type="text" name="num2" value="0" />
+            
+                    <input type="submit" value="Submit" />
+                </fieldset>
+            </form>
+        </section>
     </div>
     <footer>
     Footer: <a href="https://www.merriam-webster.com/dictionary/ellipse">More Ellipse Information </a>
