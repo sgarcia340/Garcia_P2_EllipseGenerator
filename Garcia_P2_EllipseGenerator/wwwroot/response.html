@@ -7,69 +7,85 @@
     <!--<script src="JSSourceFile.js"></script>-->
 </head>
 <body>
-    <canvas id="thecanvas" width="1500" height="400"></canvas>
-    <script>
-        var canvas = document.getElementById('thecanvas');
+    <div id="container">
+        <canvas id="thecanvas" width="1500" height="400"></canvas>
+    <div id="overlay">
+            <script>
+                //var canvas = document.getElementById('thecanvas');
 
-        if (canvas.getContext) {
-            var ctx = canvas.getContext('2d');
-            drawEllipse(ctx, 100, 100, 340, 100);
-            //drawEllipseByCenter(ctx, 60, 40, 20, 10);
-        }
+                //if (canvas.getContext) {
+                //    var ctx = canvas.getContext('2d');
+                //    drawEllipse(ctx, 100, 100, 340, 100);
+                ////    //drawEllipseByCenter(ctx, 60, 40, 20, 10);
+                //}
 
-        //function drawEllipseByCenter(ctx, cx, cy, w, h) {
-        //    drawEllipse(ctx, cx - w / 2.0, cy - h / 2.0, w, h);
-        //}
+                //function drawEllipseByCenter(ctx, cx, cy, w, h) {
+                //    drawEllipse(ctx, cx - w / 2.0, cy - h / 2.0, w, h);
+                //}
 
-        function drawEllipse(ctx, x, y, w, h) {
-            var kappa = .5522848,
-                ox = (w / 2) * kappa, // control point offset horizontal
-                oy = (h / 2) * kappa, // control point offset vertical
-                xe = x + w,           // x-end
-                ye = y + h,           // y-end
-                xm = x + w / 2,       // x-middle
-                ym = y + h / 2;       // y-middle
+                function drawEllipse(ctx, x, y, w, h) {
+                    var kappa = .5522848,
+                        ox = (w / 2) * kappa, // control point offset horizontal
+                        oy = (h / 2) * kappa, // control point offset vertical
+                        xe = x + w,           // x-end
+                        ye = y + h,           // y-end
+                        xm = x + w / 2,       // x-middle
+                        ym = y + h / 2;       // y-middle
 
-            ctx.beginPath();
-            ctx.moveTo(x, ym);
-            ctx.bezierCurveTo(x, ym - oy, xm - ox, y, xm, y);
-            ctx.bezierCurveTo(xm + ox, y, xe, ym - oy, xe, ym);
-            ctx.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
-            ctx.bezierCurveTo(xm - ox, ye, x, ym + oy, x, ym);
-            //ctx.closePath(); // not used correctly, see comments (use to close off open path)
-            ctx.stroke();
-        }
+                    ctx.beginPath();
+                    ctx.moveTo(x, ym);
+                    ctx.bezierCurveTo(x, ym - oy, xm - ox, y, xm, y);
+                    ctx.bezierCurveTo(xm + ox, y, xe, ym - oy, xe, ym);
+                    ctx.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
+                    ctx.bezierCurveTo(xm - ox, ye, x, ym + oy, x, ym);
+                    //ctx.closePath(); // not used correctly, see comments (use to close off open path)
+                    ctx.stroke();
+                }
 
-    </script>
+            </script>
 
-    <header>
-        <h1 style="color:white;">Ellipse Generator 888!!</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><b><a href="index.html">Home Page</a></b></li>
-            <li><b><a href="inputfrm.html">Ellipse Generator</a></b></li>
-        </ul>
-    </nav>
-    <div id="maincontent">
-        <aside>
-            <h2 style="font-size: 14px; color: #040920;">EARTH</h2>
-            <br />
-            <img alt="Picture of Earth" src="earth.jpg" height="140" width="200" />
-        </aside>
-    </div>
-    <footer style="color:yellow; font-size:14px;">
-        <a href="https://www.merriam-webster.com/dictionary/ellipse">More Ellipse Information </a>
-    </footer>
+            <header>
+                <h1 style="color:white;">Ellipse Generator 888!!</h1>
+            </header>
 
-    <!--<p>
-        <span id="querystring"</span>
-     </p>
-    <script>
-        <button type="button" onclick='document.getElementById("querystring").innerText =
-            draw(document.getElementbyId("txbnum1").value, document.getElementById("txbnum2").value, document.getElementById("txbnum3").value,
-            document.getElementById("txbnum4").value'> Submit
-        </button>
-    </script>-->
+            <nav>
+                <ul>
+                    <li><b><a href="index.html">Home Page</a></b></li>
+                    <li><b><a href="inputfrm.html">Ellipse Generator</a></b></li>
+                </ul>
+            </nav>
+            <div id="maincontent">
+                <aside>
+                    <h2 style="font-size: 14px; color: #040920;">EARTH</h2>
+                    <br />
+                    <img alt="Picture of Earth" src="earth.jpg" height="140" width="200" />
+                </aside>
+                <section>
+                    <script>
+                        var canvas = document.getElementById('thecanvas');
+
+                        if (canvas.getContext) {
+                            var ctx = canvas.getContext('2d');
+                            drawEllipse(ctx, 100, 100, 340, 100);
+                            //    //drawEllipseByCenter(ctx, 60, 40, 20, 10);
+                        }
+                    </script>
+                </section>
+            </div>
+        </div>
+        </div>
+            <footer style="color:yellow; font-size:14px;">
+                <a href="https://www.merriam-webster.com/dictionary/ellipse">More Ellipse Information </a>
+            </footer>
+
+            <!--< p >
+                    <span id="querystring"</ span>
+             </p>
+                    <script>
+                        <button type="button" onclick='document.getElementById("querystring").innerText =
+                    draw(document.getElementbyId("txbnum1").value, document.getElementById("txbnum2").value, document.getElementById("txbnum3").value,
+                    document.getElementById("txbnum4").value'> Submit
+                </button>
+        </script>-->
 </body>
 </html>
